@@ -1,0 +1,24 @@
+<p>
+  <strong>Name:</strong>
+  <%= @system.name %>
+</p>
+ 
+<p>
+  <strong>Address:</strong>
+  <%= @system.address %>
+</p>
+
+<p>
+<strong>Phone:</strong>
+  <%= @system.phone %>
+</p>
+
+<h2>Categories</h2>
+<%= render @system.categories %>
+
+<h2>Add a Category:</h2>
+<%= render 'categories/form' %>
+
+
+<button><%= link_to 'Back', systems_path %></button>
+<button><%= link_to 'Edit', edit_system_path(@system) %></button>

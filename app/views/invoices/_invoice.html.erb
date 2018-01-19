@@ -1,0 +1,15 @@
+<p>
+  <strong>Invoice Number:</strong>
+  <%= invoice.invoice_number %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= invoice.amount %>
+</p>
+ 
+<p>
+	<button><td><%= link_to 'Select', invoice_path(invoice) %></td></button>
+  <button><td><%= link_to 'Edit', edit_invoice_path(invoice) %></td></button>
+	<button><%= link_to 'Destroy Item', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+</p>

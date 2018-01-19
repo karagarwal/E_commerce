@@ -1,0 +1,23 @@
+<h1>Edit order</h1>
+ 
+<%= form_for @order do |form| %>
+  <p>
+    <%= form.label :order_number %><br>
+    <%= rand(5..300) %>
+  </p>
+
+  <p>
+    <%= form.label :payment_mode %><br>
+    <%= form.select :payment_mode, ['Card', 'NetBanking', 'cod']%>
+  </p>
+
+  <p>
+    <%= form.label :user_id %><br>
+    <%= form.text_field :user_id %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<button><%= link_to 'Back', orders_path %></button>

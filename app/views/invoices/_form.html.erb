@@ -1,0 +1,17 @@
+<%= form_for @order.invoice local: true do |form| %>
+  <p>
+    <%= form.label :invoice_number %><br>
+    <%= form.text_field :invoice_number %>
+  </p>
+
+  <p>
+    <%= form.label :amount %><br>
+    <%= form.text_area :amount %>
+  </p>
+
+  <p><%= form.hidden_field :order_id, :value => @order.id %> </p>
+  
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

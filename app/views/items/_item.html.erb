@@ -1,0 +1,20 @@
+<p>
+  <strong>Name:</strong>
+  <%= item.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= item.price %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= item.weight %>
+</p>
+ 
+<p>
+	<button><td><%= link_to 'Select', item_path(item) %></td></button>
+  <button><td><%= link_to 'Edit', edit_item_path(item) %></td></button>
+	<button><%= link_to 'Destroy Item', item, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+</p>

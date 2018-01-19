@@ -1,0 +1,22 @@
+<%= form_for [@item.orders.build ], local: true do |form| %>
+ 
+  <p>
+    <%= form.label :order_number %><br>
+    <%= rand(5..300) %>
+  </p>
+
+  <p>
+    <%= form.label :payment_mode %><br>
+    <%= form.select :payment_mode, ['Card', 'NetBanking', 'cod']%>
+  </p>
+
+  <p>
+    <%= form.label :user_id %><br>
+    <%= form.text_field :user_id %>
+  </p>
+  <p> <%= form.hidden_field :item_id, :value => @item.id %> </p>
+  <p>
+    <%= form.submit %>
+  </p>
+  
+<% end %>

@@ -1,0 +1,18 @@
+<p>
+  <strong>Order Number:</strong>
+  <%= @order.order_number %>
+</p>
+ 
+<p>
+  <strong>Payment Mode:</strong>
+  <%= @order.payment_mode %>
+</p>
+
+<h2>Invoice</h2>
+<%= render @order.invoice %>
+
+<h2>Add an Invoice:</h2>
+<%= render 'invoices/form' %>
+
+<button><%= link_to 'Back', orders_path %></button>
+<button><%= link_to 'Edit', edit_order_path(@order) %></button>

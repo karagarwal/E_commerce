@@ -1,0 +1,20 @@
+<p>
+  <strong>Order Number:</strong>
+  <%= order.order_number %>
+</p>
+
+<p>
+  <strong>Payment Mode:</strong>
+  <%= order.payment_mode %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= order.user_id %>
+</p>
+ 
+<p>
+	<button><td><%= link_to 'Invoice', order_path(order) %></td></button>
+  <button><td><%= link_to 'Edit', edit_order_path(order) %></td></button>
+	<button><%= link_to 'Destroy Order', order, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+</p>

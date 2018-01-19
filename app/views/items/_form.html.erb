@@ -1,0 +1,19 @@
+<%= form_for [@category.items.build ],  local: true do |form| %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :price %><br>
+    <%= form.text_area :price %>
+  </p>
+
+  <p>
+    <%= form.label :weight %><br>
+    <%= form.text_field :weight %>
+  </p>
+  <p><%= form.hidden_field :category_id, :value => @category.id %> </p>
+  <p><%= form.submit %></p>
+<% end %>

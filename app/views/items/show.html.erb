@@ -1,0 +1,23 @@
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+ 
+<p>
+  <strong>Price:</strong>
+  Rs. <%= @item.price %>
+</p>
+
+<p>
+<strong>Weight:</strong>
+  <%= @item.weight %> Kg
+</p>
+
+<h2>Order</h2>
+<%= render @item.orders %>
+
+<h2>Add an Order:</h2>
+<%= render 'orders/form' %>
+
+<button><%= link_to 'Back', items_path %></button>
+<button><%= link_to 'Edit', edit_item_path(@item) %></button>

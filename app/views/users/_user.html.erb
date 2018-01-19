@@ -1,0 +1,30 @@
+<p>
+  <strong>Name:</strong>
+  <%= user.name %>
+</p>
+ 
+<p>
+  <strong>Address:</strong>
+  <%= user.address %>
+</p>
+
+<p>
+<strong>Phone:</strong>
+  <%= user.phone %>
+</p>
+
+<p>
+<strong>username:</strong>
+  <%= user.username %>
+</p>
+
+<p>
+<strong>Password:</strong>
+  <%= user.password %>
+</p>
+
+<p>
+  <button><td><%= link_to 'Enter', user_path(user) %></td></button>
+  <button><td><%= link_to 'Edit', edit_user_path(user) %></td></button>
+	<button><%= link_to 'Destroy user', user, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+</p>

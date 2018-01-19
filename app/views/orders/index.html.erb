@@ -1,0 +1,17 @@
+<h1>Listing orders</h1>
+<table>
+  <tr>
+    <th>Order Number</th>
+    <th>Payment Mode</th>
+  </tr>
+ 
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.order_number %></td>
+      <td><%= order.payment_mode %></td>
+      <td><%= link_to 'Show', order_path(order) %></td>
+      <td><%= link_to 'Edit', edit_order_path(order) %></td>
+      <td><%= link_to 'Destroy', order_path(order), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,20 @@
+<h1>Listing Systems</h1>
+<button><%= link_to 'New System', new_system_path %></button>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+  </tr>
+ 
+  <% @systems.each do |system| %>
+    <tr>
+      <td><%= system.name %></td>
+      <td><%= system.address %></td>
+      <td><%= system.phone %></td>
+      <td><%= link_to 'Show', system_path(system) %></td>
+      <td><%= link_to 'Edit', edit_system_path(system) %></td>
+      <td><%= link_to 'Destroy', system_path(system), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,19 @@
+<h1>Edit invoice</h1>
+
+<%= form_for @invoice do |form| %>
+  <p>
+    <%= form.label :invoice_number %><br>
+    <%= form.text_field :invoice_number %>
+  </p>
+
+  <p>
+    <%= form.label :amount %><br>
+    <%= form.text_area :amount %>
+  </p>
+  
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<button><%= link_to 'Back', invoices_path %></button>

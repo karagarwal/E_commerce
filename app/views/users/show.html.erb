@@ -1,0 +1,29 @@
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+ 
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+<strong>Phone:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+<strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<h2>Categories</h2>
+<%= render @user.system.categories %>
+
+<h2>Add a category:</h2>
+<%= render 'categories/form' %>
+
+
+<button><%= link_to 'Back', userss_path %></button>
+<button><%= link_to 'Edit', edit_user_path(@user) %></button>

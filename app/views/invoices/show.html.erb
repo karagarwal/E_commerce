@@ -1,0 +1,12 @@
+<p>
+  <strong>Invoice Number:</strong>
+  <%= @invoice.invoice_number %>
+</p>
+ 
+<p>
+  <strong>Amount:</strong>
+  <%= @invoice.amount %>
+</p>
+
+<button><%= link_to 'Back', invoices_path %></button>
+<button><%= link_to 'Edit', edit_invoice_path(@invoice) %></button>

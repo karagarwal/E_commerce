@@ -1,0 +1,24 @@
+<h1>Edit item</h1>
+
+<%= form_for @item do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :price %><br>
+    <%= form.text_area :price %>
+  </p>
+
+  <p>
+    <%= form.label :weight %><br>
+    <%= form.text_field :weight %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<button><%= link_to 'Back', items_path %></button>
